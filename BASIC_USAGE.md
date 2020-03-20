@@ -44,3 +44,15 @@ in the example above, your `webp` image will be saved at `/var/cache/webp/pics/t
 ```
 ./webp-server --config=/path/to/config.json
 ```
+
+## Nginx Example
+
+This is an example for a typical Wordpress installation.
+```
+location ^~ /wp-content/uploads/ {
+    proxy_pass http://127.0.0.1:3333;
+}
+```
+If you use Caddy, you may refer to [优雅的让 Halo 支持 webp 图片输出](https://halo.run/archives/halo-and-webp).
+
+If there is a CDN in front of your website, please refer to [Use with CDN](CDN.md)

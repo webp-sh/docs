@@ -1,4 +1,4 @@
-## Contributors
+# Contributors
 
 > In alphabetical order
 
