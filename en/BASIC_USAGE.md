@@ -21,8 +21,20 @@ The default `config.json` may look like this.
 }
 ```
 
-Regarding the `IMG_PATH` section in `config.json`. 
-If you are serving images at `https://example.com/pics/tsuki.jpg` and your files are at `/var/www/image/pics/tsuki.jpg`, then `IMG_PATH` shall be `/var/www/image`.
+
+### Config Example
+
+In the following example, the image path and website URL.
+
+| Image Path                            | Website Path                         |
+| ------------------------------------- | ------------------------------------ |
+| `/var/www/img.webp.sh/path/tsuki.jpg` | `https://img.webp.sh/path/tsuki.jpg` |
+
+The `config.json` should be like:
+
+| IMG_PATH               |
+| ---------------------- |
+| `/var/www/img.webp.sh` |
 
 `EXHAUST_PATH` is cache folder for output `webp` images, with `EXHAUST_PATH` set to `/var/cache/webp` 
 in the example above, your `webp` image will be saved at `/var/cache/webp/pics/tsuki.jpg.1582558990.webp`.

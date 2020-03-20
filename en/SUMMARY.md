@@ -7,5 +7,7 @@
 * [Benchmark](BENCH.md)
 * [Use with CDN](CDN.md)
 * [Build](BUILD.md)
+* [Contributors](CONTRIBUTORS.md)
+* [Comparisons](COMPARISONS.md)
 
 * [中文](/cn/README.md)
