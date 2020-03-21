@@ -44,6 +44,7 @@ in the example above, your `webp` image will be saved at `/var/cache/webp/pics/t
 ```
 ./webp-server --config=/path/to/config.json
 ```
+To keep this program running, refer to [Supervisor](SUPERVISOR.md) section.
 
 ## Nginx Example
 
