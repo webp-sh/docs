@@ -3,6 +3,7 @@ node_js:
   - "12"
 script:
   - npm install gitbook-cli
+  - gitbook install
   - gitbook build
 deploy:
   provider: pages
