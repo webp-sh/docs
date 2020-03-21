@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "12"
 script:
+  - npm install gitbook-plugin-ga
   - npm install gitbook-cli
   - gitbook build
 deploy:
