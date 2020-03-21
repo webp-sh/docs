@@ -1,0 +1,14 @@
+{
+ "title": "WebP Server Documentation",
+ "description": "The Documentation for WebP Server",
+
+ "extension": null,
+
+ "plugins": ["ga"],
+ "pluginsConfig": {
+    "ga": {
+        "token": "UA-119121407-6"
+    }
+}
+
+}
