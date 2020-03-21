@@ -238,6 +238,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="ARTICLES.html">
+            
+                <a href="ARTICLES.html">
+            
+                    
+                    Related Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -295,12 +308,11 @@
 <p>The standard systemd service file will show on your screen. You may want to use <code>&gt;</code> to redirect to a file.</p>
 <pre><code>./webp-server -dump-systemd
 </code></pre><p>Download <code>webp-server</code> to <code>/opt/webps/webp-server</code>, and create a config file to <code>/opt/webps/config.json</code>, then,</p>
-<p><code>shell script
-./webp-server -dump-systemd &gt; /lib/systemd/system/webp-server.service
+<pre><code>./webp-server -dump-systemd &gt; /lib/systemd/system/webp-server.service
 systemctl daemon-reload
 systemctl enable webp-server.service
-systemctl start webp-server.service</code></p>
-
+systemctl start webp-server.service
+</code></pre>
                                 
                                 </section>
                             
@@ -343,7 +355,7 @@ systemctl start webp-server.service</code></p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Supervisor","level":"1.2.2","depth":2,"next":{"title":"Docker","level":"1.2.3","depth":2,"path":"DOCKER.md","ref":"DOCKER.md","articles":[]},"previous":{"title":"Basic Usage","level":"1.2.1","depth":2,"path":"BASIC_USAGE.md","ref":"BASIC_USAGE.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SUPERVISOR.md","mtime":"2020-03-21T02:48:04.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T02:48:40.649Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Supervisor","level":"1.2.2","depth":2,"next":{"title":"Docker","level":"1.2.3","depth":2,"path":"DOCKER.md","ref":"DOCKER.md","articles":[]},"previous":{"title":"Basic Usage","level":"1.2.1","depth":2,"path":"BASIC_USAGE.md","ref":"BASIC_USAGE.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SUPERVISOR.md","mtime":"2020-03-21T02:55:34.127Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T02:56:09.816Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
