@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Benchmark · GitBook</title>
+        <title>Docker · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CDN.html" />
+    <link rel="next" href="PREFETCH.html" />
     
     
-    <link rel="prev" href="PREFETCH.html" />
+    <link rel="prev" href="SUPERVISOR.html" />
     
 
     </head>
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="DOCKER.html">
+        <li class="chapter active" data-level="1.2.3" data-path="DOCKER.html">
             
                 <a href="DOCKER.html">
             
@@ -173,7 +173,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="BENCH.html">
+        <li class="chapter " data-level="1.3" data-path="BENCH.html">
             
                 <a href="BENCH.html">
             
@@ -268,7 +268,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Benchmark</a>
+        <a href="." >Docker</a>
     </h1>
 </div>
 
@@ -283,126 +283,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="benchmark-on-convert">Benchmark on convert</h1>
-<h2 id="8-core">8 core</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">file_size_range</th>
-<th style="text-align:center">file_num</th>
-<th style="text-align:center">src_size</th>
-<th style="text-align:center">dist_size</th>
-<th style="text-align:center">total</th>
-<th style="text-align:center">user</th>
-<th style="text-align:center">system</th>
-<th style="text-align:center">cpu</th>
-<th style="text-align:center">core</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">(10KB,500KB)</td>
-<td style="text-align:center">4600</td>
-<td style="text-align:center">1.3G</td>
-<td style="text-align:center">310M</td>
-<td style="text-align:center">1:44.49</td>
-<td style="text-align:center">905.41s</td>
-<td style="text-align:center">9.55s</td>
-<td style="text-align:center">875%</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td style="text-align:center">(500KB,1MB)</td>
-<td style="text-align:center">3500</td>
-<td style="text-align:center">2.4G</td>
-<td style="text-align:center">361M</td>
-<td style="text-align:center">2:04.81</td>
-<td style="text-align:center">1092.50s</td>
-<td style="text-align:center">7.98s</td>
-<td style="text-align:center">881%</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td style="text-align:center">(1MB,4MB)</td>
-<td style="text-align:center">2000</td>
-<td style="text-align:center">3.8G</td>
-<td style="text-align:center">342M</td>
-<td style="text-align:center">2:32.64</td>
-<td style="text-align:center">1345.73s</td>
-<td style="text-align:center">10.84s</td>
-<td style="text-align:center">888%</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td style="text-align:center">(4MB,32MB)</td>
-<td style="text-align:center">500</td>
-<td style="text-align:center">3.6G</td>
-<td style="text-align:center">246M</td>
-<td style="text-align:center">1:44.53</td>
-<td style="text-align:center">916.91s</td>
-<td style="text-align:center">12.03s</td>
-<td style="text-align:center">888%</td>
-<td style="text-align:center">8</td>
-</tr>
-</tbody>
-</table>
-<h2 id="1248-core">1,2,4,8 core</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">file_size_range</th>
-<th style="text-align:center">file_num</th>
-<th style="text-align:center">src_size</th>
-<th style="text-align:center">dist_size</th>
-<th style="text-align:center">8</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">(10KB,500KB)</td>
-<td style="text-align:center">4600</td>
-<td style="text-align:center">1.3G</td>
-<td style="text-align:center">310M</td>
-<td style="text-align:center">1:44.49</td>
-<td style="text-align:center">2:18.49</td>
-<td style="text-align:center">3:36.05</td>
-<td style="text-align:center">5:20.88</td>
-</tr>
-<tr>
-<td style="text-align:center">(500KB,1MB)</td>
-<td style="text-align:center">3500</td>
-<td style="text-align:center">2.4G</td>
-<td style="text-align:center">361M</td>
-<td style="text-align:center">2:04.81</td>
-<td style="text-align:center">2:49.46</td>
-<td style="text-align:center">4:16.41</td>
-<td style="text-align:center">6:28.97</td>
-</tr>
-<tr>
-<td style="text-align:center">(1MB,4MB)</td>
-<td style="text-align:center">2000</td>
-<td style="text-align:center">3.8G</td>
-<td style="text-align:center">342M</td>
-<td style="text-align:center">2:32.64</td>
-<td style="text-align:center">3:26.18</td>
-<td style="text-align:center">5:22.15</td>
-<td style="text-align:center">7:53.45</td>
-</tr>
-<tr>
-<td style="text-align:center">(4MB,32MB)</td>
-<td style="text-align:center">500</td>
-<td style="text-align:center">3.6G</td>
-<td style="text-align:center">246M</td>
-<td style="text-align:center">1:44.53</td>
-<td style="text-align:center">2:21.22</td>
-<td style="text-align:center">3:39.16</td>
-<td style="text-align:center">5:28.65</td>
-</tr>
-</tbody>
-</table>
+                                <h1 id="docker">Docker</h1>
+<p>We&apos;ve build docker images on <a href="https://hub.docker.com/repository/docker/webpsh/webps" target="_blank">hub.docker.com</a>. If you want to run <code>webp-server</code> insider docker container, you can run the command below,</p>
+<pre><code class="lang-shell">docker run -d -p 3333:3333 -v /path/to/pics:/opt/pics --name webps webpsh/webps
+</code></pre>
+<p>The path <code>path/to/pics</code> is your images serving in local. The path <code>/opt/pics</code> is currently unable modify because it&apos;s defined in the <code>config.json</code> while building the docker image.</p>
+<p>The cache folder <code>EXHAUST_PATH</code> &apos;s default is defined in <code>/opt/exhaust</code> , you can also mount the local directory for the cache folder by using <code>-v /path/to/exhaust:/opt/exhaust</code> option.</p>
 
                                 
                                 </section>
@@ -430,12 +316,12 @@
 
             
                 
-                <a href="PREFETCH.html" class="navigation navigation-prev " aria-label="Previous page: Prefetch">
+                <a href="SUPERVISOR.html" class="navigation navigation-prev " aria-label="Previous page: Supervisor">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CDN.html" class="navigation navigation-next " aria-label="Next page: Use with CDN">
+                <a href="PREFETCH.html" class="navigation navigation-next " aria-label="Next page: Prefetch">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -446,7 +332,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Benchmark","level":"1.3","depth":1,"next":{"title":"Use with CDN","level":"1.4","depth":1,"path":"CDN.md","ref":"CDN.md","articles":[]},"previous":{"title":"Prefetch","level":"1.2.4","depth":2,"path":"PREFETCH.md","ref":"PREFETCH.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"BENCH.md","mtime":"2020-03-21T02:48:04.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T02:48:40.649Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Docker","level":"1.2.3","depth":2,"next":{"title":"Prefetch","level":"1.2.4","depth":2,"path":"PREFETCH.md","ref":"PREFETCH.md","articles":[]},"previous":{"title":"Supervisor","level":"1.2.2","depth":2,"path":"SUPERVISOR.md","ref":"SUPERVISOR.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DOCKER.md","mtime":"2020-03-21T02:48:04.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T02:48:40.649Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

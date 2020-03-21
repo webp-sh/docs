@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PREFETCH.html" />
+    <link rel="next" href="SUPERVISOR.html" />
     
     
     <link rel="prev" href="USAGE.html" />
@@ -129,7 +129,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="PREFETCH.html">
+        <li class="chapter " data-level="1.2.2" data-path="SUPERVISOR.html">
+            
+                <a href="SUPERVISOR.html">
+            
+                    
+                    Supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="DOCKER.html">
+            
+                <a href="DOCKER.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="PREFETCH.html">
             
                 <a href="PREFETCH.html">
             
@@ -186,12 +212,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="CONTRIBUTORS.html">
+        <li class="chapter " data-level="1.6" data-path="COMPARISONS.html">
             
-                <a href="CONTRIBUTORS.html">
+                <a href="COMPARISONS.html">
             
                     
-                    Contributors
+                    Comparisons
             
                 </a>
             
@@ -199,12 +225,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="COMPARISONS.html">
+        <li class="chapter " data-level="1.7" data-path="CONTRIBUTORS.html">
             
-                <a href="COMPARISONS.html">
+                <a href="CONTRIBUTORS.html">
             
                     
-                    Comparisons
+                    Contributors
             
                 </a>
             
@@ -305,7 +331,8 @@
 in the example above, your <code>webp</code> image will be saved at <code>/var/cache/webp/pics/tsuki.jpg.1582558990.webp</code>.</p>
 <h2 id="run">Run</h2>
 <pre><code>./webp-server --config=/path/to/config.json
-</code></pre><h2 id="nginx-example">Nginx Example</h2>
+</code></pre><p>To keep this program running, refer to <a href="SUPERVISOR.html">Supervisor</a> section.</p>
+<h2 id="nginx-example">Nginx Example</h2>
 <p>This is an example for a typical Wordpress installation.</p>
 <pre><code>location ^~ /wp-content/uploads/ {
     proxy_pass http://127.0.0.1:3333;
@@ -344,7 +371,7 @@ in the example above, your <code>webp</code> image will be saved at <code>/var/c
                 </a>
                 
                 
-                <a href="PREFETCH.html" class="navigation navigation-next " aria-label="Next page: Prefetch">
+                <a href="SUPERVISOR.html" class="navigation navigation-next " aria-label="Next page: Supervisor">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -355,7 +382,7 @@ in the example above, your <code>webp</code> image will be saved at <code>/var/c
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Basic Usage","level":"1.2.1","depth":2,"next":{"title":"Prefetch","level":"1.2.2","depth":2,"path":"PREFETCH.md","ref":"PREFETCH.md","articles":[]},"previous":{"title":"Usage","level":"1.2","depth":1,"path":"USAGE.md","ref":"USAGE.md","articles":[{"title":"Basic Usage","level":"1.2.1","depth":2,"path":"BASIC_USAGE.md","ref":"BASIC_USAGE.md","articles":[]},{"title":"Prefetch","level":"1.2.2","depth":2,"path":"PREFETCH.md","ref":"PREFETCH.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"BASIC_USAGE.md","mtime":"2020-03-20T13:51:45.740Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T13:52:36.186Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Basic Usage","level":"1.2.1","depth":2,"next":{"title":"Supervisor","level":"1.2.2","depth":2,"path":"SUPERVISOR.md","ref":"SUPERVISOR.md","articles":[]},"previous":{"title":"Usage","level":"1.2","depth":1,"path":"USAGE.md","ref":"USAGE.md","articles":[{"title":"Basic Usage","level":"1.2.1","depth":2,"path":"BASIC_USAGE.md","ref":"BASIC_USAGE.md","articles":[]},{"title":"Supervisor","level":"1.2.2","depth":2,"path":"SUPERVISOR.md","ref":"SUPERVISOR.md","articles":[]},{"title":"Docker","level":"1.2.3","depth":2,"path":"DOCKER.md","ref":"DOCKER.md","articles":[]},{"title":"Prefetch","level":"1.2.4","depth":2,"path":"PREFETCH.md","ref":"PREFETCH.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"BASIC_USAGE.md","mtime":"2020-03-21T02:48:04.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T02:48:40.649Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

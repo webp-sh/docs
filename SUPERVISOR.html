@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Benchmark · GitBook</title>
+        <title>Supervisor · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CDN.html" />
+    <link rel="next" href="DOCKER.html" />
     
     
-    <link rel="prev" href="PREFETCH.html" />
+    <link rel="prev" href="BASIC_USAGE.html" />
     
 
     </head>
@@ -129,7 +129,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="SUPERVISOR.html">
+        <li class="chapter active" data-level="1.2.2" data-path="SUPERVISOR.html">
             
                 <a href="SUPERVISOR.html">
             
@@ -173,7 +173,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="BENCH.html">
+        <li class="chapter " data-level="1.3" data-path="BENCH.html">
             
                 <a href="BENCH.html">
             
@@ -268,7 +268,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Benchmark</a>
+        <a href="." >Supervisor</a>
     </h1>
 </div>
 
@@ -283,126 +283,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="benchmark-on-convert">Benchmark on convert</h1>
-<h2 id="8-core">8 core</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">file_size_range</th>
-<th style="text-align:center">file_num</th>
-<th style="text-align:center">src_size</th>
-<th style="text-align:center">dist_size</th>
-<th style="text-align:center">total</th>
-<th style="text-align:center">user</th>
-<th style="text-align:center">system</th>
-<th style="text-align:center">cpu</th>
-<th style="text-align:center">core</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">(10KB,500KB)</td>
-<td style="text-align:center">4600</td>
-<td style="text-align:center">1.3G</td>
-<td style="text-align:center">310M</td>
-<td style="text-align:center">1:44.49</td>
-<td style="text-align:center">905.41s</td>
-<td style="text-align:center">9.55s</td>
-<td style="text-align:center">875%</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td style="text-align:center">(500KB,1MB)</td>
-<td style="text-align:center">3500</td>
-<td style="text-align:center">2.4G</td>
-<td style="text-align:center">361M</td>
-<td style="text-align:center">2:04.81</td>
-<td style="text-align:center">1092.50s</td>
-<td style="text-align:center">7.98s</td>
-<td style="text-align:center">881%</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td style="text-align:center">(1MB,4MB)</td>
-<td style="text-align:center">2000</td>
-<td style="text-align:center">3.8G</td>
-<td style="text-align:center">342M</td>
-<td style="text-align:center">2:32.64</td>
-<td style="text-align:center">1345.73s</td>
-<td style="text-align:center">10.84s</td>
-<td style="text-align:center">888%</td>
-<td style="text-align:center">8</td>
-</tr>
-<tr>
-<td style="text-align:center">(4MB,32MB)</td>
-<td style="text-align:center">500</td>
-<td style="text-align:center">3.6G</td>
-<td style="text-align:center">246M</td>
-<td style="text-align:center">1:44.53</td>
-<td style="text-align:center">916.91s</td>
-<td style="text-align:center">12.03s</td>
-<td style="text-align:center">888%</td>
-<td style="text-align:center">8</td>
-</tr>
-</tbody>
-</table>
-<h2 id="1248-core">1,2,4,8 core</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">file_size_range</th>
-<th style="text-align:center">file_num</th>
-<th style="text-align:center">src_size</th>
-<th style="text-align:center">dist_size</th>
-<th style="text-align:center">8</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">(10KB,500KB)</td>
-<td style="text-align:center">4600</td>
-<td style="text-align:center">1.3G</td>
-<td style="text-align:center">310M</td>
-<td style="text-align:center">1:44.49</td>
-<td style="text-align:center">2:18.49</td>
-<td style="text-align:center">3:36.05</td>
-<td style="text-align:center">5:20.88</td>
-</tr>
-<tr>
-<td style="text-align:center">(500KB,1MB)</td>
-<td style="text-align:center">3500</td>
-<td style="text-align:center">2.4G</td>
-<td style="text-align:center">361M</td>
-<td style="text-align:center">2:04.81</td>
-<td style="text-align:center">2:49.46</td>
-<td style="text-align:center">4:16.41</td>
-<td style="text-align:center">6:28.97</td>
-</tr>
-<tr>
-<td style="text-align:center">(1MB,4MB)</td>
-<td style="text-align:center">2000</td>
-<td style="text-align:center">3.8G</td>
-<td style="text-align:center">342M</td>
-<td style="text-align:center">2:32.64</td>
-<td style="text-align:center">3:26.18</td>
-<td style="text-align:center">5:22.15</td>
-<td style="text-align:center">7:53.45</td>
-</tr>
-<tr>
-<td style="text-align:center">(4MB,32MB)</td>
-<td style="text-align:center">500</td>
-<td style="text-align:center">3.6G</td>
-<td style="text-align:center">246M</td>
-<td style="text-align:center">1:44.53</td>
-<td style="text-align:center">2:21.22</td>
-<td style="text-align:center">3:39.16</td>
-<td style="text-align:center">5:28.65</td>
-</tr>
-</tbody>
-</table>
+                                <h1 id="supervisor">Supervisor</h1>
+<p>To keep WebP Server running, you can use a various of supervisors.</p>
+<h2 id="screen-or-tmux">screen or tmux</h2>
+<p>Use <code>screen</code> or <code>tmux</code> to avoid being terminated. Let&apos;s take <code>screen</code> for example</p>
+<pre><code>screen -S webp
+./webp-server --config /path/to/config.json
+</code></pre><p>(Use Ctrl-A-D to detach the <code>screen</code> with <code>webp-server</code> running.)</p>
+<h2 id="systemd">Systemd</h2>
+<p>Don&apos;t worry, we&apos;ve got you covered!</p>
+<p>The standard systemd service file will show on your screen. You may want to use <code>&gt;</code> to redirect to a file.</p>
+<pre><code>./webp-server -dump-systemd
+</code></pre><p>Download <code>webp-server</code> to <code>/opt/webps/webp-server</code>, and create a config file to <code>/opt/webps/config.json</code>, then,</p>
+<p><code>shell script
+./webp-server -dump-systemd &gt; /lib/systemd/system/webp-server.service
+systemctl daemon-reload
+systemctl enable webp-server.service
+systemctl start webp-server.service</code></p>
 
                                 
                                 </section>
@@ -430,12 +327,12 @@
 
             
                 
-                <a href="PREFETCH.html" class="navigation navigation-prev " aria-label="Previous page: Prefetch">
+                <a href="BASIC_USAGE.html" class="navigation navigation-prev " aria-label="Previous page: Basic Usage">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CDN.html" class="navigation navigation-next " aria-label="Next page: Use with CDN">
+                <a href="DOCKER.html" class="navigation navigation-next " aria-label="Next page: Docker">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -446,7 +343,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Benchmark","level":"1.3","depth":1,"next":{"title":"Use with CDN","level":"1.4","depth":1,"path":"CDN.md","ref":"CDN.md","articles":[]},"previous":{"title":"Prefetch","level":"1.2.4","depth":2,"path":"PREFETCH.md","ref":"PREFETCH.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"BENCH.md","mtime":"2020-03-21T02:48:04.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T02:48:40.649Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Supervisor","level":"1.2.2","depth":2,"next":{"title":"Docker","level":"1.2.3","depth":2,"path":"DOCKER.md","ref":"DOCKER.md","articles":[]},"previous":{"title":"Basic Usage","level":"1.2.1","depth":2,"path":"BASIC_USAGE.md","ref":"BASIC_USAGE.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SUPERVISOR.md","mtime":"2020-03-21T02:48:04.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T02:48:40.649Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
