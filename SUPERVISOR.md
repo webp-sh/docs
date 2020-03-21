@@ -21,7 +21,7 @@ The standard systemd service file will show on your screen. You may want to use 
 
 Download `webp-server` to `/opt/webps/webp-server`, and create a config file to `/opt/webps/config.json`, then,
 
-```shell script
+```
 ./webp-server -dump-systemd > /lib/systemd/system/webp-server.service
 systemctl daemon-reload
 systemctl enable webp-server.service
