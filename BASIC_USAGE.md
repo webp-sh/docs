@@ -51,6 +51,7 @@ To keep this program running, refer to [Supervisor](SUPERVISOR.md) section.
 This is an example for a typical Wordpress installation.
 ```
 location ^~ /wp-content/uploads/ {
+	proxy_set_header Host $http_host;
     proxy_pass http://127.0.0.1:3333;
 }
 ```
