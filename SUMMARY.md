@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Usage](USAGE.md)
     * [Basic Usage](BASIC_USAGE.md)
+    * [Remote Backend](REMOTE_BACKEND.md)
     * [Supervisor](SUPERVISOR.md)
     * [Docker](DOCKER.md)
     * [Prefetch](PREFETCH.md)
