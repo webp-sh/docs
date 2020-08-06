@@ -1,0 +1,10 @@
+name = "webp-sh-wiki"
+type = "webpack"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./_book"
+entry-point = "workers-site"
