@@ -1,6 +1,6 @@
 # Docker
 
-We've build docker images on [hub.docker.com](https://hub.docker.com/repository/docker/webpsh/webps). If you want to run `webp-server` insider docker container, you can run the command below,
+We've build docker images on [hub.docker.com](https://hub.docker.com/r/webpsh/webps). If you want to run `webp-server` insider docker container, you can run the command below,
 ```shell
 docker run -d -p 3333:3333 -v /path/to/pics:/opt/pics --name webps webpsh/webps
 ```
