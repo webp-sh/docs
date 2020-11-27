@@ -7,5 +7,13 @@ script:
   - mv wrangler.toml.example wrangler.toml
   - gitbook install
   - gitbook build
-  - wrangler publish
+
+deploy:
+  provider: pages	
+  skip-cleanup: true	
+  local_dir: _book	
+  github-token: $GITHUB_OAUTH_TOKEN	
+  keep-history: true	
+  on:	
+    branch: master
 
