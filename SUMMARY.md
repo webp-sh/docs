@@ -7,7 +7,7 @@
     * [Supervisor](SUPERVISOR.md)
     * [Docker](DOCKER.md)
     * [Prefetch](PREFETCH.md)
-    * [Multi Path](multi-path.md)
+    * [Multi Path](MULTI_PATH.md)
 * [Benchmark](BENCH.md)
 * [Use with CDN](CDN.md)
 * [Build](BUILD.md)
