@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Prefetch · WebP Server Documentation</title>
+        <title>Remote Backend · WebP Server Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="MULTI_PATH.html" />
+    <link rel="next" href="SUPERVISOR.html" />
     
     
-    <link rel="prev" href="DOCKER.html" />
+    <link rel="prev" href="BASIC_USAGE.html" />
     
 
     </head>
@@ -129,7 +129,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="REMOTE_BACKEND.html">
+        <li class="chapter active" data-level="1.2.2" data-path="REMOTE_BACKEND.html">
             
                 <a href="REMOTE_BACKEND.html">
             
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="PREFETCH.html">
+        <li class="chapter " data-level="1.2.5" data-path="PREFETCH.html">
             
                 <a href="PREFETCH.html">
             
@@ -307,7 +307,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Prefetch</a>
+        <a href="." >Remote Backend</a>
     </h1>
 </div>
 
@@ -322,14 +322,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="prefetch">Prefetch</h1>
-<p>Prefetch will convert all your images to webp. Don&apos;t worry, WebP Server will start, you don&apos;t have to wait until prefetch completes.</p>
-<pre><code>./webp-server -prefetch
-</code></pre><p>If you want to control threads to use while prefetching, add <code>-jobs=4</code>. 
-By default, it will utilize all your CPU cores.</p>
-<pre><code># use 4 cores
-./webp-server -prefetch -jobs=4
-</code></pre>
+                                <h1 id="remote-backend">Remote Backend</h1>
+<blockquote>
+<p>WebP Proxy Go unleashed.</p>
+</blockquote>
+<h2 id="usage">Usage</h2>
+<p>If you&apos;d like to run WebP Server Go as a proxy for remote backend services, you could define your configuration file like this:</p>
+<pre><code>{
+  &quot;HOST&quot;: &quot;127.0.0.1&quot;,
+  &quot;PORT&quot;: &quot;3333&quot;,
+  &quot;QUALITY&quot;: &quot;80&quot;,
+  &quot;IMG_PATH&quot;: &quot;https://test.webp.sh&quot;,
+  &quot;EXHAUST_PATH&quot;: &quot;&quot;,
+  &quot;ALLOWED_TYPES&quot;: [&quot;jpg&quot;,&quot;png&quot;,&quot;jpeg&quot;,&quot;bmp&quot;,&quot;gif&quot;]
+}
+</code></pre><p>Please pay attention to the <code>IMG_PATH</code> config, in the example above, you suppose your files are at <code>https://test.webp.sh/path/to/images.png</code>.</p>
+<h2 id="tips">Tips</h2>
+<p>Please be aware that the <code>IMG_PATH</code> must:</p>
+<ul>
+<li>Begin with <code>https://</code> or <code>http://</code></li>
+<li>Does not contain trailing slash.<ul>
+<li>Correct: <code>https://test.webp.sh</code></li>
+<li>Wrong: <code>https://test.webp.sh/</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="requirements-for-backend">Requirements for backend</h2>
+<p>We use <code>Etag</code> header from backend to fetch and refresh/rebuild cache, so it&apos;s a need that your backend&apos;s response will contain a <code>Etag</code> header.</p>
+<p>Supported backends:</p>
+<ul>
+<li>Aliyun OSS<ul>
+<li><code>ETag</code></li>
+</ul>
+</li>
+<li>Tecent Cloud COS<ul>
+<li><code>ETag</code></li>
+</ul>
+</li>
+<li>AWS S3<ul>
+<li><code>etag</code></li>
+</ul>
+</li>
+<li>Nginx<ul>
+<li>You need to enable etag output by adding <code>etag on;</code> in your server block</li>
+<li><code>ETag</code></li>
+</ul>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -356,12 +396,12 @@ By default, it will utilize all your CPU cores.</p>
 
             
                 
-                <a href="DOCKER.html" class="navigation navigation-prev " aria-label="Previous page: Docker">
+                <a href="BASIC_USAGE.html" class="navigation navigation-prev " aria-label="Previous page: Basic Usage">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="MULTI_PATH.html" class="navigation navigation-next " aria-label="Next page: Multi Path">
+                <a href="SUPERVISOR.html" class="navigation navigation-next " aria-label="Next page: Supervisor">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -372,7 +412,7 @@ By default, it will utilize all your CPU cores.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Prefetch","level":"1.2.5","depth":2,"next":{"title":"Multi Path","level":"1.2.6","depth":2,"path":"MULTI_PATH.md","ref":"MULTI_PATH.md","articles":[]},"previous":{"title":"Docker","level":"1.2.4","depth":2,"path":"DOCKER.md","ref":"DOCKER.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-119121407-6"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebP Server Documentation","gitbook":"*","description":"The Documentation for WebP Server","extension":null},"file":{"path":"PREFETCH.md","mtime":"2020-11-27T08:25:19.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-27T08:26:04.266Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Remote Backend","level":"1.2.2","depth":2,"next":{"title":"Supervisor","level":"1.2.3","depth":2,"path":"SUPERVISOR.md","ref":"SUPERVISOR.md","articles":[]},"previous":{"title":"Basic Usage","level":"1.2.1","depth":2,"path":"BASIC_USAGE.md","ref":"BASIC_USAGE.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-119121407-6"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebP Server Documentation","gitbook":"*","description":"The Documentation for WebP Server","extension":null},"file":{"path":"REMOTE_BACKEND.md","mtime":"2020-11-27T08:25:19.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-27T08:26:04.266Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

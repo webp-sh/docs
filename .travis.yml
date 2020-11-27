@@ -1,15 +1,19 @@
 language: node_js
 node_js:
-  - "12"
+  - "11"
 script:
   - npm install gitbook-cli
+  - npm install -g @cloudflare/wrangler
+  - mv wrangler.toml.example wrangler.toml
   - gitbook install
   - gitbook build
+
 deploy:
-  provider: pages
-  skip-cleanup: true
-  local_dir: _book
-  github-token: $GITHUB_OAUTH_TOKEN
-  keep-history: true
-  on:
+  provider: pages	
+  skip-cleanup: true	
+  local_dir: _book	
+  github-token: $GITHUB_OAUTH_TOKEN	
+  keep-history: true	
+  on:	
     branch: master
+

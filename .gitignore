@@ -1,2 +1,5 @@
 _book
 node_modules
+dist
+wrangler.toml
+workers-site
