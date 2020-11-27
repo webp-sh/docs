@@ -7,3 +7,4 @@
 | Custom config per directory |      | ✔    |      |      |        |
 | Auto update                 | ✔    |      |      |      |        |
 | URL mapping                 |      |      |      | ✔    |        |
+| Compression rate display    | ✔    |      |      |      |        |
