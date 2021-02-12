@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Multi Path · WebP Server Documentation</title>
+        <title>Update · WebP Server Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="HEADERS.html" />
+    <link rel="next" href="BENCH.html" />
     
     
-    <link rel="prev" href="PREFETCH.html" />
+    <link rel="prev" href="HEADERS.html" />
     
 
     </head>
@@ -181,7 +181,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="MULTI_PATH.html">
+        <li class="chapter " data-level="1.2.6" data-path="MULTI_PATH.html">
             
                 <a href="MULTI_PATH.html">
             
@@ -212,7 +212,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="UPDATE.html">
+        <li class="chapter active" data-level="1.4" data-path="UPDATE.html">
             
                 <a href="UPDATE.html">
             
@@ -333,7 +333,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Multi Path</a>
+        <a href="." >Update</a>
     </h1>
 </div>
 
@@ -348,12 +348,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="prefetch">Prefetch</h1>
-<p>If you want to support multi path in your server, we have a better idea: just make a symbolic link</p>
-<pre><code>ln -s /var/www/li/pic /var/www/hexo/public/pic
-</code></pre><p>And make necessary changes in each of your nginx&apos;s config:</p>
-<pre><code>proxy_pass http://127.0.0.1:3333/pic1;
-</code></pre>
+                                <h1 id="update">Update</h1>
+<p>There are two update methods.</p>
+<h2 id="auto-update">Auto update</h2>
+<p>When running WebP Server Go(version &gt; 0.1.0), it will automatically detect newer versions of the program, and download them to the <code>update</code> folder in the same folder of the current program, you can replace current running program to the newer one and have a restart to use the newer version.</p>
+<h2 id="manual-update">Manual update</h2>
+<p>Just download our latest program from <a href="https://github.com/webp-sh/webp_server_go/releases" target="_blank">Releases &#xB7; webp-sh/webp_server_go &#xB7; GitHub</a>, replace the program and give it a restart.</p>
+
                                 
                                 </section>
                             
@@ -380,12 +381,12 @@
 
             
                 
-                <a href="PREFETCH.html" class="navigation navigation-prev " aria-label="Previous page: Prefetch">
+                <a href="HEADERS.html" class="navigation navigation-prev " aria-label="Previous page: Headers">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="HEADERS.html" class="navigation navigation-next " aria-label="Next page: Headers">
+                <a href="BENCH.html" class="navigation navigation-next " aria-label="Next page: Benchmark">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -396,7 +397,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Multi Path","level":"1.2.6","depth":2,"next":{"title":"Headers","level":"1.3","depth":1,"path":"HEADERS.md","ref":"HEADERS.md","articles":[]},"previous":{"title":"Prefetch","level":"1.2.5","depth":2,"path":"PREFETCH.md","ref":"PREFETCH.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-119121407-6"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebP Server Documentation","gitbook":"*","description":"The Documentation for WebP Server","extension":null},"file":{"path":"MULTI_PATH.md","mtime":"2021-02-12T13:01:36.861Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-12T13:02:20.604Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Update","level":"1.4","depth":1,"next":{"title":"Benchmark","level":"1.5","depth":1,"path":"BENCH.md","ref":"BENCH.md","articles":[]},"previous":{"title":"Headers","level":"1.3","depth":1,"path":"HEADERS.md","ref":"HEADERS.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-119121407-6"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebP Server Documentation","gitbook":"*","description":"The Documentation for WebP Server","extension":null},"file":{"path":"UPDATE.md","mtime":"2021-02-12T13:01:36.861Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-12T13:02:20.604Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
