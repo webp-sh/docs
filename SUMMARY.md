@@ -9,6 +9,7 @@
     * [Prefetch](PREFETCH.md)
     * [Multi Path](MULTI_PATH.md)
 * [Headers](HEADERS.md)
+* [Update](UPDATE.md)
 * [Benchmark](BENCH.md)
 * [Use with CDN](CDN.md)
 * [Build](BUILD.md)
