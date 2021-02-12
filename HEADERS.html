@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Prefetch · WebP Server Documentation</title>
+        <title>Headers · WebP Server Documentation</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="MULTI_PATH.html" />
+    <link rel="next" href="BENCH.html" />
     
     
-    <link rel="prev" href="DOCKER.html" />
+    <link rel="prev" href="MULTI_PATH.html" />
     
 
     </head>
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="PREFETCH.html">
+        <li class="chapter " data-level="1.2.5" data-path="PREFETCH.html">
             
                 <a href="PREFETCH.html">
             
@@ -199,7 +199,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="HEADERS.html">
+        <li class="chapter active" data-level="1.3" data-path="HEADERS.html">
             
                 <a href="HEADERS.html">
             
@@ -320,7 +320,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Prefetch</a>
+        <a href="." >Headers</a>
     </h1>
 </div>
 
@@ -335,14 +335,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="prefetch">Prefetch</h1>
-<p>Prefetch will convert all your images to webp. Don&apos;t worry, WebP Server will start, you don&apos;t have to wait until prefetch completes.</p>
-<pre><code>./webp-server -prefetch
-</code></pre><p>If you want to control threads to use while prefetching, add <code>-jobs=4</code>. 
-By default, it will utilize all your CPU cores.</p>
-<pre><code># use 4 cores
-./webp-server -prefetch -jobs=4
-</code></pre>
+                                <h1 id="headers">Headers</h1>
+<p>WebP Server Go will render the following header in response:</p>
+<ul>
+<li><p><code>etag</code></p>
+<ul>
+<li>Example: <code>W/&quot;87328-49BF2BCE&quot;</code></li>
+<li>This header is produced by <code>W/&quot;&lt;content length&gt;-&lt;CRC Checksum of the file&gt;&quot;</code> </li>
+</ul>
+</li>
+<li><p><code>x-compression-rate</code></p>
+<ul>
+<li>Example: <code>0.87</code></li>
+<li>This header is produced by <code>size(webp_image)/size(original_image)</code>, if the value is bigger than 1, it means the converted webp image is bigger than the original image, hence the original image is return to the visitor.</li>
+</ul>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -369,12 +378,12 @@ By default, it will utilize all your CPU cores.</p>
 
             
                 
-                <a href="DOCKER.html" class="navigation navigation-prev " aria-label="Previous page: Docker">
+                <a href="MULTI_PATH.html" class="navigation navigation-prev " aria-label="Previous page: Multi Path">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="MULTI_PATH.html" class="navigation navigation-next " aria-label="Next page: Multi Path">
+                <a href="BENCH.html" class="navigation navigation-next " aria-label="Next page: Benchmark">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -385,7 +394,7 @@ By default, it will utilize all your CPU cores.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Prefetch","level":"1.2.5","depth":2,"next":{"title":"Multi Path","level":"1.2.6","depth":2,"path":"MULTI_PATH.md","ref":"MULTI_PATH.md","articles":[]},"previous":{"title":"Docker","level":"1.2.4","depth":2,"path":"DOCKER.md","ref":"DOCKER.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-119121407-6"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebP Server Documentation","gitbook":"*","description":"The Documentation for WebP Server","extension":null},"file":{"path":"PREFETCH.md","mtime":"2021-02-12T13:00:35.004Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-12T13:01:24.422Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Headers","level":"1.3","depth":1,"next":{"title":"Benchmark","level":"1.4","depth":1,"path":"BENCH.md","ref":"BENCH.md","articles":[]},"previous":{"title":"Multi Path","level":"1.2.6","depth":2,"path":"MULTI_PATH.md","ref":"MULTI_PATH.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-119121407-6"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WebP Server Documentation","gitbook":"*","description":"The Documentation for WebP Server","extension":null},"file":{"path":"HEADERS.md","mtime":"2021-02-12T13:00:35.004Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-12T13:01:24.422Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
