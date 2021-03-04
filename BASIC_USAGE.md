@@ -1,5 +1,8 @@
 # Basic Usage
 
+> Note: There is a potential memory leak problem with this server and remains unsolved, we recommend using Docker to mitigate this problem, refer to [Docker](./DOCKER.html).
+> Related discussion: https://github.com/webp-sh/webp_server_go/issues/75
+
 ## Download or build the binary
 Download the `webp-server-go` from [release](https://github.com/webp-sh/webp_server_go/releases) page.
 
